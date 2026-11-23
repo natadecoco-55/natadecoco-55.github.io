@@ -3,7 +3,11 @@
 -------------------- */
 
 :root {
-  --theme-color: #00a0a0;
+  --main-color: #ad7889;
+  --background-color: #faf7f3;
+  --card-color: #ffffff;
+  --text-color: #514747;
+  --border-color: #eadfda;
 }
 
 * {
@@ -16,9 +20,16 @@ html, body {
 }
 
 body {
-  margin: 0;
-  padding: 30px;
-  color: #333;
+  padding: 100px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 /* --------------------
@@ -26,8 +37,44 @@ body {
 -------------------- */
 
 h1, h2, h3 {
-  color: var(--theme-color);
-  border-bottom: dashed 0.1em var(--theme-color);
+  color: var(--main-color);
+  border-bottom: dashed 0.1em var(--border-color);
+}
+
+h4 {
+  color: var(--main-color)
+}
+
+/* --------------------
+        About
+-------------------- */
+
+.profile-list {
+  background-color: var(--card-color);
+  padding: 15px;
+}
+
+span {
+  display: inline-block;
+  width: 120px;
+  color: var(--main-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* --------------------
+        img
+-------------------- */
+
+.card {
+  background-color: var(--card-color);
+  transform: translateY(-5px);
+}
+
+.card-text {
+  color: var(--text-color);
+  padding: 15px;
 }
 
 /* --------------------
@@ -35,8 +82,13 @@ h1, h2, h3 {
 -------------------- */
 
 a {
-  color: var(--theme-color);
-  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 30px;
+  transition: 0.3s;
 }
 
 /* --------------------
@@ -45,10 +97,6 @@ a {
 
 ul {
   list-style: none;
-}
-li:before {
-  content: "★";
-  color: var(--theme-color);
 }
 
 /* --------------------
@@ -65,13 +113,24 @@ tr {
   background-color: #fff;
 }
 tr:nth-child(2n) {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 th {
-  background: var(--theme-color);
-  color: #fff;
+  background: var(--card-color);
+  color: var(--main-color);
 }
 th, td {
   border: solid 1px #f0f0f0;
   padding: 0.5rem;
+}
+
+/* --------------------
+        フッター
+-------------------- */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: var(--sub-text-color);
+    font-size: 0.8rem;
 }
